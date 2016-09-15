@@ -33,6 +33,8 @@ class Config(DefaultConfig):
         config.set('postgres', 'query_timeout', '10')
         config.set('postgres', 'uptime', str(60 * 10))
         config.set('postgres', 'cache', str(80))
+        config.set('postgres', 'replication_lag_time', str(360))
+        config.set('postgres', 'replication_lag_bytes', str(1048576))
 
         config.add_section('system')
         config.set('system', 'enabled', str(True))
